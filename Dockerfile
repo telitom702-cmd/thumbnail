@@ -9,14 +9,16 @@ RUN apk add --no-cache \
     curl \
     unzip
 
+# Install Deno
 RUN curl -fsSL https://deno.land/install.sh | sh
 
-ENV DENO_INSTALL="/root/.deno"
-ENV PATH="$DENO_INSTALL/bin:$PATH"
+ENV DENO_INSTALL=/root/.deno
+ENV PATH=/root/.deno/bin:$PATH
 
-RUN deno --version
+RUN /root/.deno/bin/deno --version
 
 COPY requirements.txt .
+
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
