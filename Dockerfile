@@ -1,28 +1,14 @@
-FROM python:3.14-rc-alpine3.20
+FROM python:3.11-slim
 
-WORKDIR /app
+ENV PYTHONUNBUFFERED=1
 
-RUN apk add --no-cache \
-    ffmpeg \
-    jq \
-    python3-dev \
-    curl \
-    unzip
-
-# Install Deno
-RUN curl -fsSL https://deno.land/install.sh | sh
-
-ENV DENO_INSTALL=/root/.deno
-ENV PATH=/root/.deno/bin:$PATH
-
-RUN /root/.deno/bin/deno --version
+WORKDIR /thumbnail
 
 COPY requirements.txt .
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN python3 -m pip check
-
-CMD ["python3", "bot.py"]
+CMD ["python", "main.py"]
