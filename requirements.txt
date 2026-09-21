@@ -1,6 +1,6 @@
 aiohttp
 hachoir
-numpy
+#numpy
 Pillow
 requests
 tgcryptos
