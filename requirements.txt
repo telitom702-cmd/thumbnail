@@ -11,7 +11,7 @@ pytz
 utils
 pyroblock
 dnspython
-psutil
+#psutil
 loggers
 filetype
 tldextract
