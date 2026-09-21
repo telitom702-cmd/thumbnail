@@ -1,6 +1,6 @@
 aiohttp
 hachoir
-#numpy
+numpy
 Pillow
 requests
 tgcryptos
@@ -11,7 +11,7 @@ pytz
 utils
 pyroblock
 dnspython
-#psutil
+psutil
 loggers
 filetype
 tldextract
