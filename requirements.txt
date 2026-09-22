@@ -22,4 +22,5 @@ yt-dlp
 pytube
 flask
 gunicorn==22.0.0
-
+pyunpack
+patool
