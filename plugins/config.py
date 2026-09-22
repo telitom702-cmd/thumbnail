@@ -16,7 +16,7 @@ class Config(object):
     API_HASH = os.environ.get("API_HASH", "57b1f632044b4e718f5dce004a988d69")
     
     DOWNLOAD_LOCATION = "./DOWNLOADS"
-    MAX_FILE_SIZE = 2194304000
+    MAX_FILE_SIZE = 10 * 1024 * 1024 * 1024
     TG_MAX_FILE_SIZE = 2194304000
     FREE_USER_MAX_FILE_SIZE = 2194304000
     CHUNK_SIZE = int(os.environ.get("CHUNK_SIZE", 128))
