@@ -1452,7 +1452,4 @@ async def unzip_handler(client, message):
             )
         except Exception:
             pass
-
-একটা গুরুত্বপূর্ণ বিষয়: উপরের logic ".001" থেকে contiguous parts পেলেই extract করার চেষ্টা করে। Split archive-এর ক্ষেত্রে 001–003 পেলেই যদি আসলে 004/005 লাগে, extraction ব্যর্থ হতে পারে। তখন parts রেখে দেবে এবং তুমি পরের part পাঠালে আবার চেষ্টা করবে।
-
-তবে তোমার ".zip.zip.003" naming-এর জন্য আরও নির্ভরযোগ্য ব্যবস্থা করা যায়: ".001" আসার পর bot অপেক্ষা করবে, ".002", ".003"… আসবে, এবং শেষ part শনাক্ত/validation করে তারপর extract করবে। এটা করলে অসম্পূর্ণ archive নিয়ে বারবার extraction চালানোর দরকার হবে না।
+            
