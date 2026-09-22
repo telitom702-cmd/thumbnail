@@ -25,3 +25,5 @@ gunicorn==22.0.0
 pyunpack
 patool
 pyrogram
+pyunpack
+patool
