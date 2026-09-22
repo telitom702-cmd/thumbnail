@@ -4,6 +4,14 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /thumbnail
 
+# FFmpeg + archive extraction tools
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        ffmpeg \
+        p7zip-full \
+        unrar-free \
+    && rm -rf /var/lib/apt/lists/*
+
 COPY requirements.txt .
 
 RUN pip install --no-cache-dir --upgrade pip \
