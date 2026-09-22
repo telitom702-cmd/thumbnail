@@ -3,7 +3,7 @@ hachoir
 numpy
 Pillow
 requests
-tgcryptos
+tgcrypto
 olefile
 motor>=3.6.0
 pymongo<4.10
@@ -24,3 +24,4 @@ flask
 gunicorn==22.0.0
 pyunpack
 patool
+pyrogram
