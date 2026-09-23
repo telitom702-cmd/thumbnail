@@ -38,7 +38,7 @@ class Config(object):
         if x.isdigit()
     )
 
-    DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://rendamd1_db_user:M7vb8ZD9rx0AfHnP@cluster0.uzqvib6.mongodb.net/?appName=Cluster0")
+    DATABASE_URL = os.environ.get("DATABASE_URL", "")
 
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1004456487791"))
     LOGGER = logging
