@@ -38,13 +38,13 @@ class Config(object):
         if x.isdigit()
     )
 
-    DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://rendamd1_db_user:M7vb8ZD9rx0AfHnP@cluster0.uzqvib6.mongodb.net/?appName=Cluster0")
+    DATABASE_URL = os.environ.get("DATABASE_URL", "")
 
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1004456487791"))
     LOGGER = logging
     OWNER_ID = int(os.environ.get("OWNER_ID", "8248792819"))
     SESSION_NAME = "UploaderXNTBot"
-    UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "-1004468070238")
+    UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "")
 
     TG_MIN_FILE_SIZE = 2194304000
     BOT_USERNAME = os.environ.get("BOT_USERNAME", "")
