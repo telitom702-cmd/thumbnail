@@ -13,7 +13,7 @@ from pyrogram.types import (
     InlineKeyboardButton,
 )
 
-from plugins.database import db
+from plugins.database.database import db
 
 LOGGER = logging.getLogger(__name__)
 
